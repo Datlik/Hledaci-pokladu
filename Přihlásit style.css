@@ -1,62 +1,40 @@
-* {box-sizing: border-box}
-
-  .input[type=text], input[type=password] {
-  width: 20%;
-  padding: 16px;
-  margin: 20px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #fdf7f7;
-  color: #04AA6D;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.input[type=text]:focus, input[type=password]:focus {
-  background-color: rgb(230, 222, 222);
-  outline: none;
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
 }
-
-.hr {
-  border: 25px solid #ffffff;
-  margin-bottom: 25px;
+.center h1{
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
 }
-
-.button {
-  background-color: #000000;
-  color: rgb(132, 0, 255);
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.txt_field input{
   width: 100%;
-  opacity: 0.9;
-}
-
-.button:hover {
-  opacity:1;
-}
-
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-@media screen and (max-width: 400px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
 }
