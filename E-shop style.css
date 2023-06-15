@@ -37,3 +37,9 @@ ul {
     background-color: rgb(255, 255, 255);
     color: black;
   }
+
+input {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+}
