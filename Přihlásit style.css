@@ -9,6 +9,41 @@ body{background-color: antiquewhite;
   font-family: "Poppins", sans-serif;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(68, 71, 70);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+
+input {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+}
+
 .center{
   position: absolute;
   top: 50%;
