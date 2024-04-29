@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>Lovec Pokladů</title>{% endblock %}
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+    <body>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{url_for('main.index')}}">Domů</a></li>
+                <li><a href="{{url_for('main.e_shop')}}">E-Shop</a></li>
+                <li><a href="{{url_for('main.kontakty')}}">Kontakty</a></li>
+                <li><a href="{{url_for('main.nalezy')}}">Nálezy</a></li>
+                <li><a href="{{url_for('auth.prihlaseni')}}">Přihlásit</a></li>
+                <input type="text" placeholder="Hledat...">
+            </ul>
+        </nav>
+        
+        
+        <main>
+            {% block content %} 
+            <h1>This is Home page</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis doloremque maiores corporis hic commodi, ad voluptatibus perspiciatis reprehenderit necessitatibus laudantium quam molestias placeat facere cumque magni vitae velit accusantium? Et!</p>
+            {% endblock %} 
+        </main>
+    </body>
+</html>
 
