@@ -24,4 +24,13 @@
           <div class="signup_link">
             Nejste registrován? <a href="#">Registrace</a>
           </div>
+          
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{message}}</p>  
+        {% endfor %}
+    {% endif%}
+{% endwith %}
+          
 {% endblock %}
