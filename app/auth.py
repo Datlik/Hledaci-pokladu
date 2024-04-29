@@ -46,3 +46,14 @@ def profil():
     else:
         flash("Nejste přihlášený")
         return redirect(url_for("auth.prihlaseni"))
+
+
+@auth.route("/Odhlášení")
+def odhlaseni():
+    #pokud je uživatel přihlášen, získá se  jeho uživatelské jméno
+    if "username" in session:
+        username = session["username"]
+        flash(f"Byl jste úspěšně odhlášen {username}")
+    #odstranění uživatele ze session
+    session.pop("username", None)
+    return redirect(url_for("auth.prihlaseni"))
