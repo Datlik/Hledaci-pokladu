@@ -34,3 +34,15 @@ def prihlaseni():
             flash("Už jste přihlášený")  
         else:
             return render_template("prihlaseni.html")
+
+
+
+@auth.route("/Profil")
+def profil():
+    #kontrola jestli je uživatel v session
+    if "username" in session:
+        username = session["username"]
+        return render_template("profil.html", username=username)
+    else:
+        flash("Nejste přihlášený")
+        return redirect(url_for("auth.prihlaseni"))
