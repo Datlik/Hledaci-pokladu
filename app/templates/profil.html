@@ -1,1 +1,17 @@
+{% extends "index.html" %}
+{% block title %}<title>Profil</title>{% endblock %}
 
+{% block content %}
+<h1>Vítej {{username}}</h1>
+<h2>Toto je tvůj profil</h2>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+<a href="#">Odhlášení</a>
+{% endblock%}
