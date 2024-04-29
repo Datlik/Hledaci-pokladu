@@ -1,1 +1,27 @@
+{% extends "index.html" %}
+{% block title %} <title>Přihlášení</title>{% endblock %}
 
+{% block content %}
+<h1>Login page</h1>
+{% if error %}
+  <p style="color: red;">{{error}}</p>
+{% endif %}
+
+      <div class="center">
+        <h1>Přihlášení</h1>
+        <form action="{{url_for('auth.prihlaseni')}}" method="post">
+          <div class="txt_field">
+            <input type="text" name="username" required>
+          
+            <label>Jméno</label>
+          </div>
+          <div class="txt_field">
+            <input type="password" name="password" required>
+            <label>Heslo</label>
+          </div>
+          <div class="pass">Zapomenuté heslo?</div>
+          <input type="submit" value="Přihlásit">
+          <div class="signup_link">
+            Nejste registrován? <a href="#">Registrace</a>
+          </div>
+{% endblock %}
