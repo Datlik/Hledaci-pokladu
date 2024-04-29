@@ -1,1 +1,23 @@
+{% extends "index.html" %}
+{% block title %} <title>Nálezy</title>{% endblock %}
 
+{% block content %}
+<h1>Eshop page</h1>
+          <h2>Typ nálezu<span class="red">*</span> </h2>
+          <div id="artifact_type">
+            <label>
+                <input type="radio" name="type" value="1">
+                Artefakt                
+            </label>
+                <label>
+                    <input type="radio" name="type" value="2">
+                    Mince                
+                </label>
+            </div>
+        <h2>Fotografie<span class="red">*</span></h2>
+<div id="file_inputs"><div class="file file_1">
+    <input type="file" name="file_1">
+</div><div class="file file_2">
+    <input type="file" name="file_2">
+{% endblock %}
+    
