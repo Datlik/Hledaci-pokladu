@@ -1,3 +1,4 @@
+
 body {
   background: linear-gradient(bisque, burlywood);
   background-repeat: no-repeat;
@@ -156,6 +157,45 @@ input[type="submit"]:hover{
   height: 20px;
 }
 
+header {
+    text-align: center;
+    padding-top: 250px;
+}
+
+  h1#metal {
+    font-size: 150px;
+    position: relative;
+
+}
+
+   h2#aboutweb {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: 1;
+}
+
+  #button_nalezy {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    margin-top: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#button_nalezy:hover {
+  background-color: rgba(255, 255, 255, 0.582);
+  color: #000000;
+}
+/*Konec index.html(domu)*/
+
 
 /*Text popup bubble*/
 #flash{
@@ -279,4 +319,7 @@ html {
 }
 
 /*konec about us */
+
+
+
 
