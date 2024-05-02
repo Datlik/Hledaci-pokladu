@@ -147,6 +147,37 @@ input[type="submit"]:hover{
   text-decoration: underline;
 }
 
+.login_error{
+  color: red;
+  text-align: center;
+  padding-top: 4px;
+  font-size: 16px;
+  margin-bottom: -10px;
+  height: 20px;
+}
+
+
+/*Text popup bubble*/
+#flash{
+  background-color: #fff;
+  position: fixed;
+  top: 58px;
+  right: 20px;
+  font-size: x-large;
+  border: 2px solid #666666;
+  border-radius: 10px;
+  padding: 10px;
+  animation-name: Message;
+  animation-delay: 4s;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Message {
+  from {opacity: 1;}
+  to {opacity: 0; display: none;}
+}
+
 /*zacatek kontakty */
 
 /* Nadpis */
