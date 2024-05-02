@@ -7,20 +7,25 @@
       <div class="center">
         <h1>Přihlášení</h1>
         <form action="{{url_for('auth.prihlaseni')}}" method="post">
+              
           <p class="login_error">{{error}}</p>
+              
           <div class="txt_field">
-            <input type="text" name="username" required>
-          
+            <input type="text" name="username" autofocus required>
             <label>Jméno</label>
           </div>
+              
           <div class="txt_field">
             <input type="password" name="password" required>
             <label>Heslo</label>
           </div>
+              
           <div class="pass">Zapomenuté heslo?</div>
+              
           <input type="submit" value="Přihlásit">
+              
           <div class="signup_link">
-            Nejste registrován? <a href="#">Registrace</a>
-          </div>     
+            Nejste registrován? <a href="{{url_for('auth.registrace')}}">Registrace</a>
+          </div>      
 
 {% endblock %}
