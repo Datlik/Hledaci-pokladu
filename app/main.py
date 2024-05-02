@@ -11,3 +11,8 @@ def index():
 @main.route("/E-shop")
 def e_shop():
     return render_template("e-shop.html")
+
+
+@main.route("/Kontakty")
+def kontakty():
+    return render_template("kontakty.html")
