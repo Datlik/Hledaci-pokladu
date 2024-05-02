@@ -3,12 +3,26 @@
 {% block title %}<title>Registrace</title>{% endblock %}
 
 {% block content %}
-<h1>Registrace</h1>
+<div class="center">
+    <h1>Registrace</h1>
+
     <form action="{{url_for('auth.registrace')}}" method="POST">
-        <label for="username">Jméno:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Heslo:</label>
-        <input type="password" id="password" name="password" required><br>
+        <p class="signup_error">{{error}}</p>
+
+        <div class="txt_field">
+            <input type="text" id="username" name="username" autofocus required><br>
+            <label for="username">Jméno</label>
+        </div> 
+
+        <div class="txt_field">
+            <input type="password" id="password" name="password" required><br>
+            <label for="password">Heslo</label>
+        </div>
+
         <input type="submit" value="Registrace">
+
     </form>
+          <div class="login_link">
+            Jste již registrován? <a href="{{url_for('auth.prihlaseni')}}">Přihlášení</a>
+          </div>  
 {% endblock %}
