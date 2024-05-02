@@ -25,9 +25,8 @@ def prihlaseni():
                 session["username"] = username
                 flash("Byl jste úspěšně přihlášen")
                 return redirect(url_for("auth.profil"))
-            else:
-                error = "Neznámé uživatelské jméno nebo heslo."
-                return render_template("prihlaseni.html", error=error)
+        error = "Neznámé uživatelské jméno nebo heslo."
+        return render_template("prihlaseni.html", error=error)
     else:
         #jestliže je uživatel v session je přihlášený 
         if "username" in session:
