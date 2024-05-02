@@ -2,10 +2,6 @@ from flask import Blueprint, render_template, request, redirect, url_for, sessio
 
 auth = Blueprint("auth", __name__)
 
-users = {
-    "admin":"admin",
-    "jakub":"jakub"
-}
 
 @auth.route("/Přihlášení", methods=["POST", "GET"])
 def prihlaseni():
@@ -14,27 +10,54 @@ def prihlaseni():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-
+        
+        with open("app/static/data/users.json", "r") as file:
+            users = json.load(file)
+            
         #kontrola zadání hesla a jména v případě zadání mezery
         if username.strip()=="" or password.strip()=="":
             flash("Jméno nebo heslo není zadáno")
             return redirect(url_for("auth.prihlaseni"))
         
         #uložení jména do session
-        if  username in users and users[username] == password:
-            session["username"] = username
-            flash("Jste úspěšně přihlášen")
-            return redirect(url_for("auth.profil"))
-        else:
-            error = "Neznámé uživatelské jméno nebo heslo."
-            return render_template("prihlaseni.html", error=error)
+        for user in users:
+            if user["username"] == username and user["password"] == password:
+                session["username"] = username
+                flash("Byl jste úspěšně přihlášen")
+                return redirect(url_for("auth.profil"))
+            else:
+                error = "Neznámé uživatelské jméno nebo heslo."
+                return render_template("prihlaseni.html", error=error)
     else:
         #jestliže je uživatel v session je přihlášený 
         if "username" in session:
             flash("Už jste přihlášený")  
+            return redirect(url_for("auth.profil"))
         else:
             return render_template("prihlaseni.html")
 
+
+@auth.route("/registrace", methods=["GET", "POST"])
+def registrace():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+        with open("app/static/data/users.json", "r") as file:
+            users = json.load(file)
+    
+        for user in users:
+            if user["username"] == username:
+                flash("Uživatelské jméno již existuje.")
+                return render_template("registrace.html")
+        
+        new_user = {"username": username, "password": password}
+
+        with open("app/static/data/users.json", "w") as file:
+            users.append(new_user)
+            json.dump(users, file, indent=4)
+        return redirect(url_for("auth.prihlaseni"))
+    return render_template("registrace.html")
 
 
 @auth.route("/Profil")
