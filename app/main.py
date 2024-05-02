@@ -8,9 +8,9 @@ def index():
     return render_template("index.html")
 
 
-@main.route("/E-shop")
-def e_shop():
-    return render_template("e-shop.html")
+@main.route("/Onas")
+def onas():
+    return render_template("onas.html")
 
 
 @main.route("/Kontakty")
