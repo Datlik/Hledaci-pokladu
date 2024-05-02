@@ -4,7 +4,22 @@
 {% block content %}
 <h1>Vítej {{username}}</h1>
 <h2>Toto je tvůj profil</h2>
+<div class="profile_image_help">
+    <div class="profile_image">
+        <img src="static/default_profile_image.png">
+    </div>
+    <form>
+        <input type="file" name="profile_image" id="profile_image_upload" style="margin: 10px 0;">
+        <input type="submit" value="Nahrát">
+    </form>
+</div>
 
-<a href="{{url_for('auth.odhlaseni')}}">Odhlášení</a>
-<a href="{{url_for('auth.smazani')}}">Smazání účtu</a>
+<div class="profile_buttons">
+    <a href="{{url_for('auth.odhlaseni')}}">
+        <input type="submit" value="Odhlásit">
+    </a>
+    <a href="{{url_for('auth.smazani')}}">
+        <input type="submit" value="Smazat účet" style="background-color: red;">
+    </a>
+</div>
 {% endblock%}
