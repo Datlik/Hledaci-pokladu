@@ -16,3 +16,8 @@ def e_shop():
 @main.route("/Kontakty")
 def kontakty():
     return render_template("kontakty.html")
+
+
+@main.route("/Nálezy")
+def nalezy():
+    return render_template("nalezy.html")
