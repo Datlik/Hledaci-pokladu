@@ -323,6 +323,12 @@ html {
 
 /*zacatek pridat_nalez.html*/
 
+/*konec pridat_nalez.html*/
+
+
+
+/* zacatek nalezy.html*/
+
 #button_pridat_nalezy {
  display: inline-block;
     padding: 10px 25px;
@@ -339,7 +345,5 @@ html {
 #button_pridat_nalezy:hover {
   background-color: rgba(255, 255, 255, 0.582);
   color: #000000;
-  
-/*konec pridat_nalez.html*/
 
-
+  /* konec nalezy.html*/
