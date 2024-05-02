@@ -21,3 +21,7 @@ def kontakty():
 @main.route("/Nálezy")
 def nalezy():
     return render_template("nalezy.html")
+
+@main.route("/Přidat nálezy")
+def pridat_nalezy():
+    return render_template("pridat_nalezy.html")
