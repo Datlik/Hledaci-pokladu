@@ -80,3 +80,21 @@ def odhlaseni():
     #odstranění uživatele ze session
     session.pop("username", None)
     return redirect(url_for("auth.prihlaseni"))
+
+@auth.route("/smazani")
+def smazani():
+    #načtení uživatelů ze souborů users.json
+    with open("app/static/data/users.json", "r") as file:
+        users = json.load(file)
+
+    #pokud je aktuální uživatel v users.json vymaže ho
+    for user in users:
+        if session["username"] == user["username"]:
+            users.remove(user)
+            break
+
+    with open("app/static/data/users.json", "w", encoding="utf-8") as file:
+        json.dump(users, file)
+
+    session.pop("username")
+    return redirect(url_for("main.index"))
