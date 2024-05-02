@@ -321,5 +321,25 @@ html {
 /*konec about us */
 
 
+/*zacatek pridat_nalez.html*/
+
+#button_pridat_nalezy {
+ display: inline-block;
+    padding: 10px 25px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    margin-top: 20px;
+    position: absolute;
+    left: 5%;
+    transform: translateX(-50%);
+}
+#button_pridat_nalezy:hover {
+  background-color: rgba(255, 255, 255, 0.582);
+  color: #000000;
+  
+/*konec pridat_nalez.html*/
 
 
