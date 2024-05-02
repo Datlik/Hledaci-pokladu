@@ -30,8 +30,19 @@
         
         <main>
             {% block content %} 
-            <h1>This is Home page</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis doloremque maiores corporis hic commodi, ad voluptatibus perspiciatis reprehenderit necessitatibus laudantium quam molestias placeat facere cumque magni vitae velit accusantium? Et!</p>
+             
+            <header>
+                <h1 id="metal">METAL DETECTING</h1>
+            </header>
+
+            <div id="about">
+
+                <h2 id="aboutweb">Vítejte na naší stánce, zaměřené na nahrávání nálezů nalezených detektory kovů.</h2>
+
+                <a href="{{url_for('main.nalezy')}}" id="button_nalezy">Nálezy</a>
+
+            </div>
+            
             {% endblock %} 
         </main>
     </body>
