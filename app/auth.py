@@ -56,7 +56,10 @@ def registrace():
         with open("app/static/data/users.json", "w") as file:
             users.append(new_user)
             json.dump(users, file, indent=4)
+
+        flash("Registrace proběhla úspěšně. Nyní se můžete přihlásit.")
         return redirect(url_for("auth.prihlaseni"))
+        
     return render_template("registrace.html")
 
 
