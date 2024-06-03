@@ -107,3 +107,11 @@ def send_message():
     sender = session["username"]
     recipient = request.form.get("recipient")
     content = request.form.get("message")
+
+    if not recipient or not content:
+        flash("Příjemce a zpráva musí být vyplněny")
+        return redirect(url_for("auth.profil"))
+
+    # Načtěte uživatele a přidejte zprávu do jejich zpráv
+    with open("app/static/data/users.json", "r") as file:
+        users = json.load(file)
