@@ -101,3 +101,9 @@ def smazani():
 
     session.pop("username")
     return redirect(url_for("main.index"))
+
+@auth.route("/send_message", methods=["POST"])
+def send_message():
+    sender = session["username"]
+    recipient = request.form.get("recipient")
+    content = request.form.get("message")
