@@ -115,3 +115,10 @@ def send_message():
     # Načtěte uživatele a přidejte zprávu do jejich zpráv
     with open("app/static/data/users.json", "r") as file:
         users = json.load(file)
+
+    for user in users:
+        if user["username"] == recipient:
+            if "messages" not in user:
+                user["messages"] = []
+            user["messages"].append({"sender": sender, "content": content})
+            break
