@@ -122,3 +122,9 @@ def send_message():
                 user["messages"] = []
             user["messages"].append({"sender": sender, "content": content})
             break
+
+    with open("app/static/data/users.json", "w") as file:
+        json.dump(users, file, indent=4)
+
+    flash("Zpráva byla odeslána")
+    return redirect(url_for("auth.profil"))
