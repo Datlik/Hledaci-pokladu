@@ -7,6 +7,7 @@
     <h1>Registrace</h1>
 
     <form action="{{url_for('auth.registrace')}}" method="POST">
+        <input type="hidden" name="csrf_token" value = "{{ csrf_token() }}" />
         <p class="signup_error">{{error}}</p>
 
         <div class="txt_field">
