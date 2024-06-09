@@ -18,6 +18,8 @@
                 <li><a href="{{url_for('auth.prihlaseni')}}">Přihlásit</a></li>
             </ul>
         </nav>
+        <button id="theme-toggle">režim</button>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
         
         {% with messages = get_flashed_messages() %}
             {% if messages %}
