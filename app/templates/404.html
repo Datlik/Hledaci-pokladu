@@ -1,7 +1,9 @@
-from flask import Blueprint, render_template
+{% block title %} <title>ERROR</title>{% endblock %}
 
-error = Blueprint("error",__name__)
-
-@error.errorhandler(404)
-def page_not_found(error):
-    return render_template('404.html'), 404
+{% block content %}
+    <div>
+        <div class="container-fluid col-2 text-center align-middle">
+            <h1>Jejda, tato stránka neexistuje.</h1>
+            <a href="{{ url_for('main.index') }}"><button class="">Zpět na domovskou stránku</button></a>
+        </div>
+    </div>
