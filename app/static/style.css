@@ -402,3 +402,13 @@ html {
 }
 
 /*konec profil*/
+
+body.light-mode {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+button {
+  margin: 20px;
+  padding: 10px;
+}
