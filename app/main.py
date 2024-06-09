@@ -25,3 +25,12 @@ def nalezy():
 @main.route("/Přidat nálezy")
 def pridat_nalezy():
     return render_template("pridat_nalezy.html")
+
+@main.route("/upload", methods=["POST"])
+def upload():
+    if request.method == "POST":
+        files = request.files.getlist("file")
+
+        for file in files:
+            file.save(file.filename)
+        return render_template("nalez.html" , name=file.filename)
