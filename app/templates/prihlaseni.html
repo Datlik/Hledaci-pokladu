@@ -7,7 +7,7 @@
       <div class="center">
         <h1>Přihlášení</h1>
         <form action="{{url_for('auth.prihlaseni')}}" method="post">
-              
+          <input type="hidden" name="csrf_token" value = "{{ csrf_token() }}" />
           <p class="login_error">{{error}}</p>
               
           <div class="txt_field">
