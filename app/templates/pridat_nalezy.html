@@ -2,13 +2,7 @@
 {% block title %} <title>Nálezy</title>{% endblock %}
 
 {% block content %}
-<form action="/nalezy" method="post" enctype="multipart/form-data">
-  <div id="file_inputs"><div class="file file_1">
-    <input type="file" name="file_1">
-  </div>
-  <div class="file file_2">
-    <input type="file" name="file_2">
-  </div>
-  <input type="submit" value="Submit" class="btn btn-info">
-</form>
+<form action="/upload" method="post" enctype="multipart/form-data">
+              <input type="file" name="file" multiple>
+              <input type="submit" value="upload">
 {% endblock %}
