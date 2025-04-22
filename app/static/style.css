@@ -243,31 +243,110 @@ header {
   to {opacity: 0; display: none;}
 }
 
-/*zacatek kontakty */
+/* === ZAČÁTEK FEEDBACK STYLŮ === */
 
-/* Nadpis */
+/* Nadpis pro sekci zpětné vazby */
 .nadpis {
-  padding: 10px;
+  padding: 20px;
   font-size: 60px;
   text-align: center;
   background: antiquewhite;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 5px solid #e6d8c3;
 }
 
-.column {
-  float: left;
+/* Kontejner pro formulář */
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #fffaf3;
+}
+
+/* Styl formuláře */
+.feedback-form {
   width: 100%;
-  padding: 200px;
-  padding-right: 30px;
-  font-size: 50px;
+  max-width: 700px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Popisky formuláře */
+.feedback-form label {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  font-size: 22px;
 }
 
-/*konec kontakty */
+/* Inputy a textarea pro formulář */
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 18px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+/* Fokus na inputy a textarea */
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #a36d4f;
+  outline: none;
+}
+
+/* Textarea speciální styl */
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Tlačítko pro odeslání */
+.feedback-form button {
+  margin-top: 30px;
+  padding: 15px 25px;
+  background-color: #a36d4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #8c5b3f;
+}
+
+/* Responzivní styl pro menší obrazovky */
+@media (max-width: 600px) {
+  .feedback-form {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .feedback-form label {
+    font-size: 20px;
+  }
+
+  .feedback-form button {
+    width: 100%;
+  }
+}
+
+/* === KONEC FEEDBACK STYLŮ === */
 
 
 /*začátek about us */
