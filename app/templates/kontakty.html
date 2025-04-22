@@ -1,32 +1,47 @@
 {% extends "index.html" %}
-{% block title %} <title>Kontakty</title>{% endblock %}
+
+{% block title %} <title>Zpětná vazba</title>{% endblock %}
 
 {% block content %}
 
 <div class="nadpis">
-  <h2>KONTAKTY</h2>
+  <h2>ZPĚTNÁ VAZBA</h2>
 </div>
 
-<div class="row">
-  <div class="column" style="background-color:#666666;">
-    <h2>Telefoní číslo</h2>
-    <p>+420 ??? ??? ???</p>
-  </div>
-  <div class="column" style="background-color:antiquewhite;">
-    <h2>E-mail</h2>
-    <p>idk123@seznam.cz</p>
-  </div>
-</div>
+<div class="feedback-container">
+  <form class="feedback-form" onsubmit="submitFeedback(event)">
+    <label for="name">Jméno:</label>
+    <input type="text" id="name" name="name" placeholder="Vaše jméno" required>
 
-<div class="row">
-  <div class="column" style="background-color:#666666;">
-    <h2>Adresa</h2>
-    <p>Dánská 5463, Plzeň</p>
-  </div>
-  <div class="column" style="background-color:antiquewhite;">
-    <h2>Instagram</h2>
-    <p>lovci_pokladu.</p>
-  </div>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="např. email@domena.cz" required>
+
+    <label for="message">Zpráva:</label>
+    <textarea id="message" name="message" placeholder="Napište nám, co si myslíte..." required></textarea>
+
+    <button type="submit">Odeslat</button>
+  </form>
 </div>
 
 {% endblock %}
+
+<script>
+  function submitFeedback(event) {
+    event.preventDefault(); // Zabrání odeslání formuláře
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Tady by byl kód pro odeslání dat na server (např. přes Fetch, EmailJS, PHP...)
+    console.log("Zpětná vazba odeslána:");
+    console.log("Jméno:", name);
+    console.log("Email:", email);
+    console.log("Zpráva:", message);
+
+    alert("Děkujeme za vaši zpětnou vazbu! ❤️");
+
+    // Reset formuláře
+    event.target.reset();
+  }
+</script>
