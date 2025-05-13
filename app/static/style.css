@@ -425,11 +425,68 @@ html {
 /*konec about us */
 
 
-/*zacatek pridat_nalez.html*/
+/*zacatek pridat_nalezy.html*/
 
+/* Styl pro celý formulář */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styl pro jednotlivé vstupy a textarea */
+input[type="text"],
+textarea,
+input[type="file"],
+select {
+    display: block;
+    margin: 15px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Styl pro tlačítko odeslání */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styl pro labely */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Styl pro textové pole a textarea */
+textarea {
+    resize: vertical;
+}
+
+/* Pěkné zarovnání pro text a formátování */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
   
-/*konec pridat_nalez.html*/
+/*konec pridat_nalezy.html*/
 
 
 
@@ -437,7 +494,7 @@ html {
 
 #button_pridat_nalezy {
  display: inline-block;
-    padding: 10px 25px;
+    padding: 10px 100px;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -445,7 +502,7 @@ html {
     border-radius: 7px;
     margin-top: 20px;
     position: absolute;
-    left: 5%;
+    left: 50%;
     transform: translateX(-50%);
 }
 #button_pridat_nalezy:hover {
