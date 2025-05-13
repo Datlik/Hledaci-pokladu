@@ -1,10 +1,114 @@
 {% block title %} <title>ERROR</title>{% endblock %}
 
 {% block content %}
-    <div>
-        <div class="container-fluid col-2 text-center align-middle">
-            <h1>Jejda, tato stránka neexistuje.</h1>
-            <a href="{{ url_for('main.index') }}"><button class="">Zpět na domovskou stránku</button></a>
-        </div>
+ <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgba(255,248,227,255);
+      color: black;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .text {
+      flex: 1 1 400px;
+    }
+
+    .text h1 {
+      font-size: 3em;
+      margin-bottom: 13px;
+    }
+
+    .text p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .menu button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .menu button:hover {
+      background-color: green;
+    }
+
+    .image {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .menu {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+<section>
+  <div class="container">
+    <div class="text">
+      <h1>Jejda, tato stránka neexistuje.</h1>
+      <p>Nemůžeme najít stránku, kterou hledáte. Prosím zkontrolujte vaši URL adresu.</p>
+      <ul class="menu">
+        <li><a href="{{ url_for('main.index') }}"><button>Zpět na domovskou stránku</button></a></li>
+      </ul>
     </div>
+    <div>
+      <img class="image" src="static/images/detektor.png" alt="Chyba 404 obrázek">
+    </div>
+  </div>
+</section>
 {% endblock %}
