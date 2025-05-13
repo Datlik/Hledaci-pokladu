@@ -1,9 +1,10 @@
 {% extends "index.html" %}
-{% block title %} <title>Nálezy</title>{% endblock %}
+
+{% block title %}
+    <title>Nálezy</title>
+{% endblock %}
 
 {% block content %}
 
-<a href="{{url_for('main.pridat_nalezy')}}" id="button_pridat_nalezy">Přidat nálezy</a>
-
+    <a href="{{ url_for('main.pridat_nalezy') }}" id="button_pridat_nalezy">Přidat nálezy</a>
 {% endblock %}
-    
