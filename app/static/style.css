@@ -250,10 +250,10 @@ header {
   padding: 20px;
   font-size: 60px;
   text-align: center;
-  background: antiquewhite;
+  background: linear-gradient(bisque, burlywood);
   color: #333;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border-bottom: 5px solid #e6d8c3;
+  border-bottom: linear-gradient(bisque, burlywood);
 }
 
 /* Kontejner pro formulář */
