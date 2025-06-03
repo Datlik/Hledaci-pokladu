@@ -1,4 +1,5 @@
 - přidat databázi na nové nálezy
+- obrázky nahrávat na google disc
 - nahrání obrázku s novým nálezem propojený s databází
 - přidání komentáře pod příspěvky(nálezy)
 - vytvoření přihlášení přes google
